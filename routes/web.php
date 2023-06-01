@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $names = ['giacomo', 'giovanni', 'lorenzo','federica'];
+
+    return view('home', compact('names'));
+})->name('home');
+
+
+
+Route::get('/about-us', function (){
+    $goal = 10;
+    $colors = ['black', 'red', 'blue','pink'];
+
+    return view('about',compact('colors','goal'));
+})->name('about');
