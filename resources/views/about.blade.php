@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>About us</h1>
+    <a href="{{route('home')}}"> about</a>
 
     <ul>
 
@@ -17,6 +18,8 @@
 
     </ul>
 
-    <a href="{{route('home')}}"> about</a>
+    @for ($i=1; $i < $goal; $i++)
+        <h3>{{$i}}</h3>
+    @endfor
 </body>
 </html>
